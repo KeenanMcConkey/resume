@@ -1,0 +1,12 @@
+# Ignore custom/tailored resumes
+custom_resumes/
+
+# Ignore temporary files
+*.tmp
+*.bak
+*~
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo

@@ -1,0 +1,59 @@
+/*
+ * Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
+ *
+ * CSS for making a resume with pandoc. Inspired by moderncv.
+ *
+ * This CSS document is delivered to you under the CC BY-SA 3.0 License.
+ * https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+ */
+
+/* Whole document */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 240mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    margin: 2mm auto; /* Center the content on the page */
+    background: #FFFFFF;
+    padding: 2mm; /* Add padding to ensure content doesn't touch the edges */
+    box-sizing: border-box; /* Include padding in the width and height */
+    font-size: 13.1px; /* Standard font size for resumes */
+}
+
+/* Title of the resume */
+h1 {
+    margin-top: 0mm;
+    font-size: 30px; /* Slightly smaller for better fit */
+    color: #397249;
+    text-align: center;
+}
+
+/* Titles of categories */
+h2 {
+    color: #397249;
+    font-size: 20px; /* Smaller for better fit */
+}
+
+/* Subheadings */
+h5 {
+    color: #727272;
+    font-size: 15px; /* Smaller for better fit */
+    text-align: center;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #397249;
+}
+a:hover, a:active {
+    background-color: #397249;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #333;
+}
+
+/* Horizontal separators */
+hr {
+    color: #A6A6A6;
+    margin: 0px 0; /* Add some space around horizontal lines */
+}
