@@ -17,21 +17,6 @@ python create_pdf.py ../Resume.md ../Resume.pdf
 pip install -r resume_tools/requirements.txt
 ```
 
-## Repository Structure
-
-```
-.
-├── Resume.md                 # Main resume (markdown)
-├── Resume.html              # HTML version
-├── style.css                # Styling for HTML resume
-├── resume_tools/            # PDF generation tools
-│   ├── create_pdf.py        # CLI tool for PDF generation
-│   ├── requirements.txt     # Python dependencies
-│   └── README.md           # Tool documentation
-├── custom_resumes/          # Tailored resumes (gitignored)
-└── .gitignore
-```
-
 ## Usage
 
 ### Creating a PDF
