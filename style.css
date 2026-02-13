@@ -16,13 +16,13 @@ body {
     background: #FFFFFF;
     padding: 2mm; /* Add padding to ensure content doesn't touch the edges */
     box-sizing: border-box; /* Include padding in the width and height */
-    font-size: 13.1px; /* Standard font size for resumes */
+    font-size: 100px; /* Standard font size for resumes */
 }
 
 /* Title of the resume */
 h1 {
     margin-top: 0mm;
-    font-size: 30px; /* Slightly smaller for better fit */
+    font-size: 40px; /* Slightly smaller for better fit */
     color: #397249;
     text-align: center;
 }
