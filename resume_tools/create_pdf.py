@@ -7,6 +7,8 @@ Uses styling inspired by style.css with green headers and clean layout.
 Usage:
     python create_pdf.py input.md output.pdf
     python create_pdf.py input.md  (outputs to input.pdf)
+
+Customize styling by editing styles.py
 """
 
 import sys
@@ -14,10 +16,15 @@ import os
 import re
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.units import inch
 from reportlab.lib.enums import TA_LEFT, TA_CENTER
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
-from reportlab.lib.colors import HexColor
+
+# Import style configuration
+try:
+    from styles import get_style_config
+except ImportError:
+    print("Error: styles.py not found. Make sure it's in the same directory as create_pdf.py")
+    sys.exit(1)
 
 
 def create_resume_pdf(input_md, output_pdf):
@@ -31,84 +38,95 @@ def create_resume_pdf(input_md, output_pdf):
     with open(input_md, 'r') as f:
         content = f.read()
 
-    # Set up PDF with balanced margins
+    # Load style configuration
+    style_config = get_style_config()
+    margins = style_config['margins']
+    spacing = style_config['spacing']
+
+    # Set up PDF with configured margins
     doc = SimpleDocTemplate(
         output_pdf,
         pagesize=letter,
-        topMargin=0.35*inch,
-        bottomMargin=0.35*inch,
-        leftMargin=0.55*inch,
-        rightMargin=0.55*inch
+        topMargin=margins['topMargin'],
+        bottomMargin=margins['bottomMargin'],
+        leftMargin=margins['leftMargin'],
+        rightMargin=margins['rightMargin']
     )
 
-    # Define custom styles
+    # Define custom styles from configuration
     styles = getSampleStyleSheet()
 
-    # Header/Name style - inspired by style.css
+    # Header/Name style
+    name_config = style_config['name']
     styles.add(ParagraphStyle(
         name='Name',
         parent=styles['Heading1'],
-        fontSize=18,
-        textColor=HexColor('#397249'),  # Green from style.css
-        spaceAfter=1,
+        fontSize=name_config['fontSize'],
+        textColor=name_config['textColor'],
+        spaceAfter=name_config['spaceAfter'],
         alignment=TA_CENTER,
-        fontName='Helvetica-Bold'
+        fontName=name_config['fontName']
     ))
 
-    # Contact info style - inspired by style.css h5
+    # Contact info style
+    contact_config = style_config['contact']
     styles.add(ParagraphStyle(
         name='Contact',
         parent=styles['Normal'],
-        fontSize=10,
-        textColor=HexColor('#727272'),  # Gray from style.css
-        spaceAfter=5,
+        fontSize=contact_config['fontSize'],
+        textColor=contact_config['textColor'],
+        spaceAfter=contact_config['spaceAfter'],
         alignment=TA_CENTER
     ))
 
-    # Section header style - inspired by style.css h2
+    # Section header style
+    section_config = style_config['section_header']
     styles.add(ParagraphStyle(
         name='SectionHeader',
         parent=styles['Heading2'],
-        fontSize=11,
-        textColor=HexColor('#397249'),  # Green from style.css
-        spaceAfter=1,
-        spaceBefore=3,
-        fontName='Helvetica-Bold',
+        fontSize=section_config['fontSize'],
+        textColor=section_config['textColor'],
+        spaceAfter=section_config['spaceAfter'],
+        spaceBefore=section_config['spaceBefore'],
+        fontName=section_config['fontName'],
         borderWidth=0,
-        borderColor=HexColor('#000000'),
+        borderColor=section_config['textColor'],
         borderPadding=0,
         borderRadius=0
     ))
 
     # Job title style
+    job_config = style_config['job_title']
     styles.add(ParagraphStyle(
         name='JobTitle',
         parent=styles['Normal'],
-        fontSize=10,
-        textColor=HexColor('#000000'),
-        spaceAfter=1,
-        fontName='Helvetica-Bold'
+        fontSize=job_config['fontSize'],
+        textColor=job_config['textColor'],
+        spaceAfter=job_config['spaceAfter'],
+        fontName=job_config['fontName']
     ))
 
-    # Regular text style - inspired by style.css body
+    # Regular text style
+    body_config = style_config['body']
     styles.add(ParagraphStyle(
         name='ResumeBody',
         parent=styles['Normal'],
-        fontSize=9,
-        textColor=HexColor('#000000'),
-        leading=11,
-        spaceAfter=0.5
+        fontSize=body_config['fontSize'],
+        textColor=body_config['textColor'],
+        leading=body_config['leading'],
+        spaceAfter=body_config['spaceAfter']
     ))
 
-    # Bullet point style - inspired by style.css body
+    # Bullet point style
+    bullet_config = style_config['bullet']
     styles.add(ParagraphStyle(
         name='ResumeBullet',
         parent=styles['Normal'],
-        fontSize=9,
-        textColor=HexColor('#000000'),
-        leading=11,
+        fontSize=bullet_config['fontSize'],
+        textColor=bullet_config['textColor'],
+        leading=bullet_config['leading'],
         leftIndent=0,
-        spaceAfter=0.5
+        spaceAfter=bullet_config['spaceAfter']
     ))
 
     # Build story
@@ -142,7 +160,7 @@ def create_resume_pdf(input_md, output_pdf):
             section_name = line.replace('##', '').strip()
             # Add section header
             story.append(Paragraph(f'<b>{section_name.upper()}</b>', styles['SectionHeader']))
-            story.append(Spacer(1, 0.03*inch))
+            story.append(Spacer(1, spacing['section_divider']))
 
         # Job titles (###)
         elif line.startswith('### '):
@@ -168,7 +186,7 @@ def create_resume_pdf(input_md, output_pdf):
 
         # Empty lines - minimal spacing
         elif not line:
-            story.append(Spacer(1, 0.02*inch))
+            story.append(Spacer(1, spacing['empty_line']))
 
         i += 1
 

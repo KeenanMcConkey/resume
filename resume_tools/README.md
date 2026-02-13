@@ -12,7 +12,8 @@ Resume/
 │   ├── Resume_Apple_FullStack.md
 │   └── *.pdf
 ├── resume_tools/                # This folder
-│   ├── create_pdf.py
+│   ├── create_pdf.py            # Main PDF generator
+│   ├── styles.py                # Customizable styling configuration
 │   ├── requirements.txt
 │   └── README.md
 └── .gitignore                   # Ignores custom_resumes/
@@ -69,11 +70,39 @@ python resume_tools/create_pdf.py custom_resumes/Resume_Apple_FullStack.md
 ## Styling
 
 The PDF uses styling inspired by `style.css`:
-- Name: 18pt, green, bold, centered
-- Contact info: 10pt, gray, centered
-- Section headers: 11pt, green, bold, uppercase
+- Name: 25pt, green (#397249), bold, centered
+- Contact info: 10pt, gray (#727272), centered
+- Section headers: 12pt, green, bold, uppercase
 - Job titles: 10pt, bold
-- Body text: 9pt
+- Body text: 9.5pt
+
+### Customizing Styles
+
+All styling is controlled by `styles.py`. To customize your PDF appearance:
+
+1. Open `styles.py` in a text editor
+2. Modify the values at the top of the file:
+
+```python
+# Example: Make your name larger
+FONT_SIZE_NAME = 28              # Default: 25
+
+# Example: Change colors
+COLOR_NAME = HexColor('#0066CC')  # Default: #397249 (green)
+
+# Example: Adjust margins
+MARGIN_TOP = 0.5 * inch          # Default: 0.35
+```
+
+3. Save the file and regenerate your PDF
+
+**Common customizations:**
+- **Font sizes**: Adjust `FONT_SIZE_*` values (in points)
+- **Colors**: Change `COLOR_*` values (hex format: `#RRGGBB`)
+- **Spacing**: Modify `SPACE_*` and `MARGIN_*` values
+- **Line height**: Adjust `LEADING_*` values
+
+See `styles.py` for all available settings and detailed comments.
 
 ## Troubleshooting
 
