@@ -153,6 +153,7 @@ def create_resume_pdf(input_md, output_pdf):
         # Contact info (##### format)
         if line.startswith('#####'):
             contact = line.replace('#####', '').strip()
+            contact = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', contact)
             story.append(Paragraph(contact, styles['Contact']))
 
         # Section headers (##)

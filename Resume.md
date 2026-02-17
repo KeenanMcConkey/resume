@@ -22,7 +22,7 @@ title: Keenan McConkey
 
 ### Software Co-op, [Sanctuary AI](https://www.sanctuary.ai) — 2022 — Vancouver, BC
 
-- Developed software for ROS-based humanoid robot using Python and C++; focused on physics simulation
+- Developed software for ROS-based humanoid robot using Python and C++; built physics simulations in NVIDIA Isaac Sim and Omniverse
 - Created automated scripts and metrics to evaluate sensor visualization, object tracking, and manipulation performance
 - Collaborated with ML researchers, robotics, and controls teams to debug and optimize Sim-to-Real transfer
 
@@ -62,7 +62,7 @@ title: Keenan McConkey
 
 ## Technical Skills
 
-**Languages & Frameworks:** Python, JavaScript/TypeScript, React, C#, C++, Rust, SQL
+**Languages & Frameworks:** Python, JavaScript/TypeScript, React, C#, C++, Rust, MATLAB, SQL
 **Backend & APIs:** RESTful API design, microservices architecture, data pipelines, real-time data processing
 **ML & Data:** PyTorch, NumPy, pandas, data visualization, ML model training and deployment
 **DevOps & Infrastructure:** Docker, Kubernetes, Terraform, CI/CD (GitHub Actions), Azure, Linux/macOS
