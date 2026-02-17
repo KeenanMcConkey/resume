@@ -166,20 +166,20 @@ def create_resume_pdf(input_md, output_pdf):
         elif line.startswith('### '):
             job_line = line.replace('###', '').strip()
             # Parse markdown links
-            job_line = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'<i>\1</i>', job_line)
+            job_line = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', job_line)
             story.append(Paragraph(f'<b>{job_line}</b>', styles['JobTitle']))
 
         # Bullet points
         elif line.startswith('- '):
             bullet_text = line[2:].strip()
             # Convert markdown links to plain text with italics for company names
-            bullet_text = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'<i>\1</i>', bullet_text)
+            bullet_text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', bullet_text)
             story.append(Paragraph(f'• {bullet_text}', styles['ResumeBullet']))
 
         # Regular paragraphs
         elif line and not line.startswith('#'):
             # Convert markdown links
-            line = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'<i>\1</i>', line)
+            line = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', line)
             # Bold text
             line = re.sub(r'\*\*([^\*]+)\*\*', r'<b>\1</b>', line)
             story.append(Paragraph(line, styles['ResumeBody']))
