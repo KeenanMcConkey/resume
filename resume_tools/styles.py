@@ -48,8 +48,8 @@ LEADING_BULLET = 11              # Line spacing for bullet points
 # VERTICAL SPACING
 # ============================================================================
 
-SPACE_AFTER_NAME = 6             # Space below name
-SPACE_AFTER_CONTACT = 5          # Space below contact info
+SPACE_AFTER_NAME = 10            # Space below name
+SPACE_AFTER_CONTACT = 8          # Space below contact info
 SPACE_BEFORE_SECTION = 3         # Space before section headers
 SPACE_AFTER_SECTION = 1          # Space after section headers
 SPACE_AFTER_JOB_TITLE = 1        # Space after job titles
