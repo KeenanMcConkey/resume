@@ -35,7 +35,7 @@ FONT_SIZE_NAME = 25              # Your name at the top
 FONT_SIZE_CONTACT = 10           # Contact information
 FONT_SIZE_SECTION_HEADER = 12    # Section headers (WORK EXPERIENCE, etc.)
 FONT_SIZE_JOB_TITLE = 10         # Job titles and company names
-FONT_SIZE_BODY = 9.5             # Bullet points and paragraphs
+FONT_SIZE_BODY = 9               # Bullet points and paragraphs
 
 # ============================================================================
 # LINE SPACING (LEADING)
