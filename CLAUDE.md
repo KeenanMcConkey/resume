@@ -5,6 +5,7 @@
 **Portfolio:** http://keenanmcconkey.dev
 **GitHub:** https://github.com/KeenanMcConkey
 **Contact:** k.t.mcconkey@gmail.com • (415) 216-7605 • San Francisco, CA
+**Citizenship:** Canadian + German — requires US visa sponsorship; no restrictions for Canadian roles
 
 Engineering Physics grad (UBC, 2021, GPA 3.75) with a background at the intersection of software and physical systems — robotics, embedded systems, ML, and backend infrastructure.
 
@@ -129,11 +130,14 @@ M. Khalili, **K. T. McConkey**, K. Ta, L. C. Wu, H. F. M. Van der Loos and J. F.
 | Plaid | Software Engineer | Applied | `Resume_Plaid_SWE.md` | https://jobs.lever.co/plaid/f456f4fa-a9f7-4673-892a-8943e3cfa3fe | Fintech backend |
 | Orb | Fullstack SWE, Pricing Lifecycle | Applied | `Resume_Orb_FullStack.md` | https://jobs.ashbyhq.com/orb/20199cf9-8f79-4e26-bc9d-dd98b3008d59 | $170-220K, Python/TS/React/Kafka |
 | Hive AI | Software Engineer, Backend | Applied | `Resume_HiveAI_SWE.md` | https://jobs.lever.co/hive/9461e715-9e58-4414-bc9b-13e449f92b08 | $120-180K, AI/ML APIs |
-| Anara | Software Engineer, Backend | Resume ready | `Resume_Anara_Backend.md` | https://jobs.ashbyhq.com/anara/b8991553-d4c6-4c8c-8431-3aeb2ed4bfb2 | $150-200K+equity, YC, AI research |
+| Anara | Software Engineer, Backend | Applied | `Resume_Anara_Backend.md` | https://jobs.ashbyhq.com/anara/b8991553-d4c6-4c8c-8431-3aeb2ed4bfb2 | $150-200K+equity, YC, AI research |
+| CodeRabbit | Software Engineer, Backend | Applied | `Resume_CodeRabbit_Backend.md` | https://jobs.ashbyhq.com/coderabbit/cc33b1da-5984-4b74-9376-21ebc8844f01 | $145-175K+equity, TypeScript/Node, microservices, SF hybrid |
+| EarnIn | Software Engineer, Backend | Applied | `Resume_EarnIn_Backend.md` | https://job-boards.greenhouse.io/earnin/jobs/7589856 | CAD $105-128K, Python/C#/Kotlin, microservices, Vancouver hybrid |
 
 ### Tier 2 — Identified, Not Yet Applied
 | Company | Role | URL | Notes |
 |---------|------|-----|-------|
+| Skild AI | Software Engineer, AI Inference | Applied | `Resume_Skild_AIInference.md` | https://job-boards.greenhouse.io/skildai-careers/jobs/4136353008 | $100-300K, C++/Rust/Python+PyTorch+CUDA, SF or Pittsburgh, robotics |
 | Zoox | SWE, Ride & Fleet Services | https://jobs.lever.co/zoox | AV dispatch, Python/C++/Kafka, Foster City |
 | Waymo | SWE Backend, Simulation | https://careers.withwaymo.com | $204-259K, C++, Mountain View, 5+ yrs preferred |
 
@@ -149,6 +153,9 @@ M. Khalili, **K. T. McConkey**, K. Ta, L. C. Wu, H. F. M. Van der Loos and J. F.
 | `Resume_Orb_FullStack.md` | Fullstack SWE | Orb |
 | `Resume_HiveAI_SWE.md` | Software Engineer, Backend | Hive AI |
 | `Resume_Anara_Backend.md` | Software Engineer, Backend | Anara |
+| `Resume_CodeRabbit_Backend.md` | Software Engineer, Backend | CodeRabbit |
+| `Resume_Skild_AIInference.md` | Software Engineer, AI Inference | Skild AI |
+| `Resume_EarnIn_Backend.md` | Software Engineer, Backend | EarnIn |
 
 ## Repo Workflow
 
@@ -160,13 +167,26 @@ M. Khalili, **K. T. McConkey**, K. Ta, L. C. Wu, H. F. M. Van der Loos and J. F.
 
 ## Job Search Process
 
-1. **Search** — use WebSearch targeting: site:jobs.lever.co, site:jobs.ashbyhq.com, site:greenhouse.io; filter by SF, 2-4 years exp, Python/C++/backend; target AV, robotics, fintech, AI/ML companies
-2. **Fetch JDs** — use WebFetch on direct job URLs to extract full description, stack, salary, requirements
-3. **Curate** — present tiered shortlist (Tier 1 = strong match, Tier 2 = stretch/different location)
-4. **Build resume** — create `custom_resumes/Resume_<Company>_<Role>.md`, generate PDF, open for review
+**Token-efficient method (preferred):** Spawn a general-purpose subagent using the template at `resume_tools/job_search_prompt.md`. Update the [SEARCH PARAMETERS] section (locations, already-applied list), then call:
+
+```
+Task(subagent_type="general-purpose", prompt=<contents of job_search_prompt.md with updated params>)
+```
+
+The subagent runs in a separate context and returns only a curated shortlist table — no search noise in the main conversation.
+
+**Steps:**
+1. **Search** — spawn subagent with job_search_prompt.md (update already-applied list first)
+2. **Fetch JDs** — subagent handles this; spot-check any unclear results with WebFetch
+3. **Curate** — subagent returns Tier 1 / Tier 2 shortlist
+4. **Build resume** — create `custom_resumes/Resume_<Company>_<Role>.md`, generate PDF
 5. **Fit check** — target full one page; if under ~90% full, add detail; if over, trim bullets or reduce font
 6. **Track** — add to Job Applications Tracker above with status (Resume ready → Applied → Interview)
-7. **Update status** — when user applies, update tracker status from "Resume ready" to "Applied"
+7. **Update status** — when user applies, update tracker to "Applied"; update job_search_prompt.md "Already applied" list
+
+**Search locations:** SF Bay Area, Vancouver BC, Los Angeles, Seattle, London UK, Berlin Germany (and remote)
+**Never suggest defense contractors:** Anduril, Shield AI, Joby, Lockheed, Raytheon, Northrop, Palantir, L3Harris, SAIC, Booz Allen, Leidos, General Dynamics, BAE Systems
+**Sponsorship note:** London/Berlin roles have no restrictions (German passport = EU/UK right to work). US roles require sponsorship. Vancouver roles are fine (Canadian passport).
 
 ## Resume Tailoring Guidelines
 
