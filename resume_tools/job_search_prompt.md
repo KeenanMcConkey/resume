@@ -30,7 +30,7 @@ Use WebSearch and WebFetch. Prefer jobs.lever.co, jobs.ashbyhq.com, and job-boar
 
 ## [SEARCH PARAMETERS] — edit before each run
 
-**Target locations:** SF Bay Area, Vancouver BC, Los Angeles, Seattle, London UK, Berlin Germany
+**Target locations:** SF Bay Area, Vancouver BC, Los Angeles, Seattle, London UK, Berlin Germany, Montreal QC
 **Role types:** Backend SWE, ML/AI SWE, Robotics SWE, Full-Stack SWE
 **Experience level:** 0–3 years required, NOT roles requiring 4+ years of experience, NOT new grad/intern
 **Salary range:** $120K–$220K USD or CAD $100K–$160K
@@ -48,8 +48,8 @@ Canadian roles (EarnIn Vancouver, etc.) do not have this restriction — include
 London and Berlin roles have no citizenship/sponsorship issues (EU/UK citizen via German passport).
 For remote roles, check whether they accept international workers or Canada-based applicants.
 
-**Already applied:** Nuro, Plaid, Orb, Hive AI, Anara, CodeRabbit, EarnIn, Skild AI (update this list each run)
-**Resume ready (don't re-search):** Skild AI, EarnIn, CodeRabbit
+**Already applied:** Nuro, Plaid, Orb, Hive AI, Anara, CodeRabbit, EarnIn, Skild AI, Mistral AI, Giga, SF Compute Company, Serve Robotics, Wayve, Foundation Robotics, Mundane, Benchling, LTTS (update this list each run)
+**Resume ready (don't re-search):** Skild AI, EarnIn, CodeRabbit, Giga, SF Compute Company, Waabi
 
 ---
 
@@ -77,7 +77,7 @@ Return a markdown table for each tier. For each job include:
 
 Run exactly 4 searches total, each covering multiple locations and role types at once:
 
-1. `site:jobs.lever.co OR site:jobs.ashbyhq.com software engineer backend Python C++ "San Francisco" OR "Vancouver" OR "Seattle" OR "Los Angeles" 2025 2026`
+1. `site:jobs.lever.co OR site:jobs.ashbyhq.com software engineer backend Python C++ "San Francisco" OR "Vancouver" OR "Seattle" OR "Los Angeles" OR "Montreal" 2025 2026`
 2. `site:jobs.lever.co OR site:jobs.ashbyhq.com software engineer backend Python C++ "London" OR "Berlin" 2025 2026`
 3. `site:jobs.lever.co OR site:jobs.ashbyhq.com software engineer robotics OR "AI inference" OR "machine learning" Python C++ Rust 2025 2026`
 4. `site:job-boards.greenhouse.io software engineer backend Python robotics ML inference 2025 2026`

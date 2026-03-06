@@ -133,6 +133,17 @@ M. Khalili, **K. T. McConkey**, K. Ta, L. C. Wu, H. F. M. Van der Loos and J. F.
 | Anara | Software Engineer, Backend | Applied | `Resume_Anara_Backend.md` | https://jobs.ashbyhq.com/anara/b8991553-d4c6-4c8c-8431-3aeb2ed4bfb2 | $150-200K+equity, YC, AI research |
 | CodeRabbit | Software Engineer, Backend | Applied | `Resume_CodeRabbit_Backend.md` | https://jobs.ashbyhq.com/coderabbit/cc33b1da-5984-4b74-9376-21ebc8844f01 | $145-175K+equity, TypeScript/Node, microservices, SF hybrid |
 | EarnIn | Software Engineer, Backend | Applied | `Resume_EarnIn_Backend.md` | https://job-boards.greenhouse.io/earnin/jobs/7589856 | CAD $105-128K, Python/C#/Kotlin, microservices, Vancouver hybrid |
+| Mistral AI | Software Engineer, Backend | Applied | `Resume_MistralAI_BackendSWE.md` | https://jobs.lever.co/mistral/77b8339f-da37-4f38-b554-1d154f72ca8f | London UK, Python/TS/distributed systems, no sponsorship needed (German passport) |
+| Giga | Software Engineer I/II | Applied | `Resume_Giga_SWE.md` | https://jobs.ashbyhq.com/GigaML/df509404-4205-4ec2-88aa-43fe99e70e43 | $160-250K USD, Vancouver on-site, Python/ML/backend, Canadian role |
+| SF Compute Company | Software Engineer — Cloud | Applied | `Resume_SFCompute_SWE.md` | https://jobs.ashbyhq.com/sfcompute/6fd69951-3a03-46b4-a5ca-048ffc542322 | $150-250K, SF hybrid, C++/Rust/gRPC/K8s, sponsors visas |
+| Waabi | Software Engineer | Skipped — posting dead | `Resume_Waabi_SWE.md` | https://jobs.lever.co/waabi/9bcf52fc-482e-4404-8399-2a90d63c86f9 | No non-senior openings currently; check back later |
+| Serve Robotics | Robotics Engineer, Autonomy | Applied | `Resume_ServeRobotics_RoboticsEngineer.md` | https://jobs.ashbyhq.com/serverobotics/90641f72-662d-483c-a549-d54caa5705d8 | $140-170K+equity, Remote (US/Canada), C++/Python/ROS/SLAM/ML |
+| Wayve | Software Engineer, Sensor Systems | Applied | `Resume_Wayve_SensorSystems.md` | https://wayve.firststage.co/jobs/KwVfvBxY4a/view | Sunnyvale CA, C++/ROS/embedded Linux/sensor integration, sponsorship unconfirmed |
+| Foundation Robotics | Automation HW & SW Integration Engineer | Applied | `Resume_Foundation_HWSWIntegration.md` | https://ats.rippling.com/en-GB/foundation-robotics/jobs/fdbf64cb-d666-4d6a-a01d-140070930578 | $135-160K, SF in-person, Python/Java/embedded/humanoid robots, sponsorship unconfirmed |
+| Mundane | Robotic Systems Engineer | Applied | `Resume_Mundane_RoboticSystemsEngineer.md` | https://www.linkedin.com/jobs/view/4374449872 | $140-250K+equity, Palo Alto CA, C++/Python/ROS/embedded/real-time, humanoid robots |
+| LTTS | Camera and ISP Engineer | Applied | `Resume_LTTS_CameraISP.md` | https://www.linkedin.com/jobs/view/4332206784 | SF onsite, C++/Python/embedded/imaging, contractor role via L&T Technology Services |
+| Amazon (FAR) | SDE — Robotics and Physics Simulation | Resume ready | `Resume_Amazon_PhysicsSimSDE.md` | https://www.amazon.jobs/en/jobs/3177240/sde-robotics-and-physics-simulation-frontier-ai-robotics | $165-223K, SF, C++/Python/Isaac Sim/physics engines/ROS |
+| Benchling | Software Engineer, Agents | Applied | `Resume_Benchling_AgentsSWE.md` | https://jobs.ashbyhq.com/benchling/beb49c64-85d0-4eae-b41a-ad09157f47d7 | $165-223K+equity, SF in-person, Python/React/LLMs/AI agents |
 
 ### Tier 2 — Identified, Not Yet Applied
 | Company | Role | URL | Notes |
@@ -156,6 +167,13 @@ M. Khalili, **K. T. McConkey**, K. Ta, L. C. Wu, H. F. M. Van der Loos and J. F.
 | `Resume_CodeRabbit_Backend.md` | Software Engineer, Backend | CodeRabbit |
 | `Resume_Skild_AIInference.md` | Software Engineer, AI Inference | Skild AI |
 | `Resume_EarnIn_Backend.md` | Software Engineer, Backend | EarnIn |
+| `Resume_MistralAI_BackendSWE.md` | Software Engineer, Backend | Mistral AI |
+| `Resume_Giga_SWE.md` | Software Engineer I/II | Giga |
+| `Resume_SFCompute_SWE.md` | Software Engineer — Cloud | SF Compute Company |
+| `Resume_Waabi_SWE.md` | Software Engineer | Waabi |
+| `Resume_ServeRobotics_RoboticsEngineer.md` | Robotics Engineer, Autonomy | Serve Robotics |
+| `Resume_Wayve_SensorSystems.md` | Software Engineer, Sensor Systems | Wayve |
+| `Resume_Foundation_HWSWIntegration.md` | Automation HW & SW Integration Engineer | Foundation Robotics |
 
 ## Repo Workflow
 
@@ -184,7 +202,7 @@ The subagent runs in a separate context and returns only a curated shortlist tab
 6. **Track** — add to Job Applications Tracker above with status (Resume ready → Applied → Interview)
 7. **Update status** — when user applies, update tracker to "Applied"; update job_search_prompt.md "Already applied" list
 
-**Search locations:** SF Bay Area, Vancouver BC, Los Angeles, Seattle, London UK, Berlin Germany (and remote)
+**Search locations:** SF Bay Area, Vancouver BC, Los Angeles, Seattle, Montreal QC, London UK, Berlin Germany (and remote)
 **Never suggest defense contractors:** Anduril, Shield AI, Joby, Lockheed, Raytheon, Northrop, Palantir, L3Harris, SAIC, Booz Allen, Leidos, General Dynamics, BAE Systems
 **Sponsorship note:** London/Berlin roles have no restrictions (German passport = EU/UK right to work). US roles require sponsorship. Vancouver roles are fine (Canadian passport).
 
